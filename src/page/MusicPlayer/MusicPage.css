@@ -1,0 +1,97 @@
+.music {
+	flex: 4;
+	height: 100%;
+	background-color: #188880;
+	overflow-y: auto;
+}
+
+.musicWrapper {
+	padding: 30px;
+	padding-top: 80px;
+	width: 100%;
+	/* height: 100%; */
+	background: linear-gradient(#0000 0, #00000080 100%);
+	word-spacing: -2px;
+}
+
+.music .content {
+	display: flex;
+	align-items: flex-end;
+	gap: 20px;
+}
+.musicCover {
+	width: 230px;
+	flex-shrink: 0;
+}
+
+.musicCover img {
+	width: 100%;
+}
+
+.music .musicInfo .title {
+	color: #fff;
+	font-size: 66px;
+	font-family: "gotham-bold";
+	word-spacing: -7px;
+}
+
+.musicDescription {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.musicDescription span:nth-child(1) {
+	color: #fff;
+	font-family: "gotham-bold";
+}
+
+.musicDescription span:nth-child(2) {
+	color: #ffffffde;
+	font-weight: 600;
+}
+
+.musicDescription span:nth-child(3) {
+	color: #ffffffaf;
+	font-weight: 600;
+}
+
+.music .musicDetail {
+	padding: 30px;
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.37298669467787116) 0%,
+		rgba(0, 0, 0, 1) 75%
+	);
+}
+
+.music .musicIcon {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.musicDetail .playBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 6px;
+	border-radius: 50%;
+	background: #1dc75a;
+	cursor: pointer;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+	.music .content {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.music .content .musicDescription{
+		justify-content: center;
+	}
+
+}

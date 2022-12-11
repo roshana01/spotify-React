@@ -1,0 +1,130 @@
+:root {
+	--item-height: 48px;
+}
+
+.sideBar {
+	flex: 1;
+	min-width: 270px;
+	height: 100%;
+	background: #000;
+	color: #fff;
+	padding-top: 70px;
+}
+.sideBarWrapper {
+	color: #f0efefb7;
+	padding: 35px 5px 35px 15px;
+}
+
+.closeMenu {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	display: none;
+}
+
+.sidebarLogo {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding-left: 10px;
+	margin-bottom: 25px;
+	color: #fff;
+	font-family: "gotham-bold";
+	font-size: 20px;
+}
+
+.sidebarLogo img {
+	width: 35px;
+}
+
+.sideBarList {
+	list-style: none;
+	margin-bottom: 3rem;
+	padding: 0;
+	position: relative;
+}
+.sidebarItem {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 9px 7px;
+	font-size: 15px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.sidebarItem:hover {
+	color: #f0f0f0;
+}
+.sideBarIcon.heart {
+	color: #1dc75a;
+}
+
+.sideBarIcon.heart {
+	animation: heartbeat 3s linear 3s infinite forwards;
+}
+
+.sideBarList .underline {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 3px;
+	height: 48px;
+	background: #1dc75a;
+	transition: all 0.3s;
+}
+
+.sideBarList li:nth-child(1):hover ~ .underline {
+	/* background-color: #fff; */
+	transform: translateY(0);
+}
+.sideBarList li:nth-child(2):hover ~ .underline {
+	transform: translateY(var(--item-height));
+}
+.sideBarList li:nth-child(3):hover ~ .underline {
+	transform: translateY(calc(var(--item-height) * 2));
+}
+
+@keyframes heartbeat {
+	0% {
+		transform: scale(0.8);
+	}
+	25% {
+		transform: scale(1.2);
+	}
+	50% {
+		transform: scale(1);
+	}
+	75% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(0.8);
+	}
+}
+
+/* Responsive */
+
+@media screen and (max-width: 992px) {
+	.sideBar {
+		max-width: 300px;
+		height: 100vh;
+		position: fixed;
+		visibility: hidden;
+		left: 0;
+		top: 0;
+		overflow-y: scroll;
+		z-index: 998;
+		transform: translateX(-100%);
+		transition: all 0.9s;
+	}
+
+	.sideBar.open {
+		transform: translateX(0);
+		visibility: visible;
+	}
+
+	.closeMenu {
+		display: block;
+	}
+}

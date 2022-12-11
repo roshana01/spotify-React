@@ -1,0 +1,147 @@
+.player {
+	width: 100%;
+	height: 90px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #181818;
+	border-top: 1px solid #282828;
+	z-index: 999;
+}
+
+.playerWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	padding: 10px 30px;
+}
+
+.playerMusicInfo {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	gap: 13px;
+}
+
+.musicThumbnail {
+	width: 54px;
+	border-radius: 5px;
+}
+
+.musicName {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2px;
+}
+
+.musicName .name {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.musicName .title {
+	color: #ffffffb2;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.playerControl {
+	flex: 3;
+	align-self: flex-start;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+}
+
+.playerControlButtons {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.playerControlButtons button {
+	background: none;
+	color: #fff;
+	border: none;
+}
+
+.playerControlButtons .skipBtn {
+	color: #ffffffb2;
+}
+
+.playerBar {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.barContainer {
+	width: 400px;
+	height: 3px;
+	border-radius: 10px;
+	background-color: #ffffff2b;
+	overflow: hidden;
+}
+
+.barContainer .bar {
+	width: 45%;
+	height: 100%;
+	background: #1dc75a;
+}
+
+.playerBar .playerTime {
+	color: #ffffffb2;
+	font-size: 11px;
+	font-weight: 600;
+}
+
+.playerSoundBar {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.playerSoundBar .barContainer {
+	width: 120px;
+}
+
+.playerSoundBar .soundIcon {
+	color: #fff;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 992px) {
+	.barContainer {
+		width: 200px;
+	}
+	.playerSoundBar .barContainer {
+		width: 60px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.playerSoundControl {
+		display: none;
+	}
+
+	.playerMusicInfo {
+		flex: 1;
+	}
+	.playerControl {
+		flex: 2;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.playerControl {
+		flex: 1;
+	}
+	.playerMusicInfo {
+		display: none;
+	}
+}

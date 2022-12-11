@@ -1,0 +1,47 @@
+:root {
+	--column-xxl-count: 10;
+	--column-xl-count: 5;
+	--column-lg-count: 5;
+	--column-md-count: 4;
+	--column-sm-count: 2;
+}
+
+.home {
+	flex: 4;
+	height: 100%;
+	padding: 90px 20px;
+	background: rgb(42, 42, 42);
+	background: linear-gradient(180deg, rgba(42, 42, 42, 1) 0%, rgba(9, 9, 9, 1) 30%);
+	overflow-y: scroll;
+
+}
+
+.home .title {
+	font-family: "gotham-bold";
+	font-weight: 900;
+	font-size: 24px;
+	letter-spacing: -2px;
+	color: #fff;
+}
+
+.musicContainer {
+	/* display: grid;
+	grid-template-columns: repeat(5, auto);
+	grid-template-rows: 1fr;
+	gap: 20px 25px; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 20px;
+}
+
+
+
+/* Responsive */
+
+@media screen and (max-width: 576px) {
+	.musicContainer {
+		justify-content: center;
+	}
+}
+

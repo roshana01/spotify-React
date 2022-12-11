@@ -1,0 +1,44 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "gotham";
+	src: url("../public/fonts/GothamBook.ttf");
+}
+@font-face {
+	font-family: "gotham-bold";
+	src: url("../public/fonts/Gotham-Bold.otf");
+}
+@font-face {
+	font-family: "gotham-light";
+	src: url("../public/fonts/Gotham-Light.otf");
+}
+
+body {
+	font-family: "gotham";
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background: #181818;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #282828;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+
+*::selection {
+	background: #1dc75b;
+	color: #fff;
+}
